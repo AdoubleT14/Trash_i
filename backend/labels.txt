@@ -1,0 +1,11 @@
+bag_plastic
+bottle_plastic
+box_paper
+box_plastic
+can
+cup_paper
+cup_plastic
+paper
+stick
+tools
+unknow

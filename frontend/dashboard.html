@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สถิติ - Trashi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <header class="pt-4">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html">♻️ Trashi</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">หน้าหลัก</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="dashboard.html">สถิติ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        <div class="text-center">
+            <h1 class="fw-bold">สถิติและข้อมูลภาพรวม</h1>
+            <p class="lead text-muted">ภาพรวมของขยะที่ถูกจำแนกผ่านระบบ Trashi</p>
+        </div>
+
+        <div class="row mt-5 text-center g-4">
+            <div class="col-lg-4">
+                <div class="summary-card p-4 h-100">
+                    <i class="fa-solid fa-magnifying-glass-chart fs-1 text-primary mb-3"></i>
+                    <h3 id="total-scans" class="fw-bold display-4">0</h3>
+                    <p class="text-muted mb-0">จำนวนครั้งที่สแกนทั้งหมด</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="summary-card p-4 h-100">
+                    <i class="fa-solid fa-star fs-1 text-warning mb-3"></i>
+                    <h3 id="most-common-item" class="fw-bold display-6" style="min-height: 60px;">-</h3>
+                    <p class="text-muted mb-0">ขยะที่พบบ่อยที่สุด</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="summary-card p-4 h-100">
+                    <i class="fa-solid fa-boxes-stacked fs-1 text-info mb-3"></i>
+                    <h3 id="total-classes" class="fw-bold display-4">0</h3>
+                    <p class="text-muted mb-0">ประเภทขยะที่จำแนกได้</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-5">
+            <div class="col">
+                <div class="chart-card p-4">
+                    <h4 class="fw-bold">กราฟแสดงปริมาณขยะ</h4>
+                    <canvas id="wasteChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="static/dashboard.js"></script>
+</body>
+</html>

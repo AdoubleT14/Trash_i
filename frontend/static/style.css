@@ -1,0 +1,132 @@
+/* Google Font */
+body {
+    font-family: 'Sarabun', sans-serif;
+    background-color: #fdfaf6; /* Cream background */
+    color: #4B4B4B; /* Dark grey text */
+}
+
+/* ✅ NEW: Earthy Green Palette */
+:root {
+    --primary-green: #5dad5f; /* สีเขียวหลัก */
+    --dark-green: #3d8c3f;    /* สีเขียวเข้ม (สำหรับ hover) */
+    --light-green-bg: #E8F5E9; /* สีเขียวอ่อน (สำหรับพื้นหลัง) */
+}
+
+/* === SHARED STYLES (Header / Nav / Buttons) === */
+.logo { color: #343a40; }
+.nav-links a {
+    color: #6c757d;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+/* UPDATED */
+.nav-links a.active,
+.nav-links a:hover {
+    color: var(--primary-green);
+}
+
+/* === BUTTON STYLES (All Green!) === */
+/* ทำให้ปุ่ม success (สีเขียว) และ primary (สีฟ้า) ใช้สีเขียวใหม่ทั้งหมด */
+.btn-success, .btn-primary {
+    background-color: var(--primary-green);
+    border-color: var(--primary-green);
+    font-weight: bold;
+    padding: 0.75rem;
+    transition: all 0.2s ease-in-out;
+}
+.btn-success:hover, .btn-primary:hover {
+    background-color: var(--dark-green);
+    border-color: var(--dark-green);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* === CARD STYLES === */
+.content-card, .side-card, .summary-card, .chart-card {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+}
+
+/* === INDEX PAGE STYLES === */
+.upload-area {
+    border: 2px dashed #e0e0e0;
+    border-radius: 0.75rem;
+    padding: 2rem;
+    text-align: center;
+    cursor: pointer;
+    background-color: #fafafa;
+    transition: background-color 0.3s, border-color 0.3s;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* UPDATED: เปลี่ยนสี hover ของพื้นที่อัปโหลด */
+.upload-area:hover, .upload-area.dragover {
+    background-color: var(--light-green-bg);
+    border-color: var(--primary-green);
+}
+.upload-area img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+.result-image-container {
+    width: 100%;
+    height: 300px;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background-color: #f8f9fa;
+}
+.result-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#history-list li {
+    background-color: #f8f9fa;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+/* UPDATED: เปลี่ยนสีตัวเลข % */
+.history-confidence {
+    font-weight: bold;
+    color: var(--primary-green);
+}
+
+/* === DASHBOARD PAGE STYLES === */
+#wasteChart { max-height: 450px; }
+
+/* === ADDED FOR NEW FEATURES === */
+
+/* Modal List Styling */
+.modal-list li {
+    padding-left: 1.5em;
+    text-indent: -1.5em;
+    margin-bottom: 0.5rem;
+}
+/* UPDATED: เปลี่ยนสีไอคอน list */
+.modal-list li::before {
+    content: '🔹';
+    padding-right: 0.5em;
+    color: var(--primary-green);
+}
+
+/* Personal Stats Styling */
+#personal-stats-text {
+    font-size: 1rem;
+}
+/* UPDATED: เปลี่ยนสีตัวเลขสถิติ */
+#personal-stats-text .stat-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-green);
+}

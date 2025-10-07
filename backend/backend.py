@@ -16,7 +16,7 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 
 # --- 1. การตั้งค่าพื้นฐาน ---
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "https://g1weds.consolutechcloud.com"}})
+CORS(app, resources={r"/*": {"origins": "https://g1weds.consolutechcloud/web.com"}})
 
 # --- 2. การตั้งค่า Database ---
 DB_HOST = "localhost"

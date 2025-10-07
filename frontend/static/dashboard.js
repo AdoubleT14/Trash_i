@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const API_DASHBOARD_ENDPOINT = 'http://127.0.0.1:4700/api/dashboard-data';
+    const API_DASHBOARD_ENDPOINT = '/backend/api/dashboard-data';
 
     async function initializeDashboard() {
         try {
